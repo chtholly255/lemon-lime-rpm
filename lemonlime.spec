@@ -6,6 +6,7 @@ BuildArch: x86_64
 License: GPLv3
 URL: https://github.com/Project-LemonLime/Project_LemonLime
 Source0: https://github.com/Project-LemonLime/Project_LemonLime/releases/download/%{version}/Lemon-%{version}-source-all.7z
+Patch0: panel-icon.patch # virtual source to avoid rpkg's special behavor (?)
 
 BuildRequires:  p7zip
 BuildRequires:  cmake
