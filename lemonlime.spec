@@ -20,8 +20,6 @@ BuildRequires:  xcb-util-cursor
 A tiny judging environment for OI contest based on Lemon + LemonPlus
 
 %prep
-# %setup -c Lemon-%{version}-source-all
-# cd %{_builddir}/%{name}-%{version}
 %autosetup -c Lemon-%{version}-source-all
 
 %build
