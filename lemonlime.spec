@@ -2,11 +2,9 @@ Name: lemon-lime
 Version: 0.3.6.1
 Release: %autorelease
 Summary: A tiny judging environment for OI contest based on Lemon + LemonPlus
-BuildArch: x86_64
 License: GPLv3
 URL: https://github.com/Project-LemonLime/Project_LemonLime
 Source0: https://github.com/Project-LemonLime/Project_LemonLime/releases/download/%{version}/Lemon-%{version}-source-all.7z
-Patch0: panel-icon.patch # virtual source to avoid rpkg's special behavor (?)
 
 BuildRequires:  p7zip
 BuildRequires:  cmake
@@ -22,8 +20,9 @@ BuildRequires:  xcb-util-cursor
 A tiny judging environment for OI contest based on Lemon + LemonPlus
 
 %prep
-%setup -c Lemon-%{version}-source-all
-cd %{_builddir}/%{name}-%{version}
+# %setup -c Lemon-%{version}-source-all
+# cd %{_builddir}/%{name}-%{version}
+%autosetup -c Lemon-%{version}-source-all
 
 %build
 export _LEMON_BUILD_INFO_="LemonLime built by Fedora COPR (Unofficial)"
